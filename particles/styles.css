@@ -1,0 +1,104 @@
+/* styles.css */
+/* Layout: canvas on the left, UI panel on the right */
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 340px; /* left: simulation canvas, right: UI */
+  height: 100vh;
+  background: #111;
+  color: #eee;
+  font-family: system-ui, sans-serif;
+}
+
+canvas {
+  background: #0f0f10;
+  display: block;
+}
+
+/* Right-side UI panel */
+#ui {
+  border-left: 1px solid #333;
+  background: #1a1a1a;
+  padding: 12px;
+  overflow: auto;
+}
+
+h3 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+}
+
+input,
+button {
+  width: 100%;
+  margin-top: 4px;
+  background: #202020;
+  color: #eee;
+  border: 1px solid #333;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2a2a2a;
+}
+
+/* Matrix styling */
+#matrix table {
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+#matrix th,
+#matrix td {
+  border: 1px solid #444;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+}
+
+/* Matrix buttons: navy background */
+.matrix-btn {
+  width: 100%;
+  height: 100%;
+  background: navy;
+  border: none;
+  cursor: pointer;
+}
+
+.matrix-btn:hover {
+  background: #001f4d; /* darker navy on hover */
+}
+
+.matrix-btn.selected {
+  outline: 2px solid #4aa3ff;
+}
+
+/* Species labels: numbers colored to match species */
+.species-label {
+  font-weight: bold;
+}
+
+/* Graph editor */
+#graph {
+  border: 1px solid #444;
+  background: #000;
+  margin-top: 8px;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}

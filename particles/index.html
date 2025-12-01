@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Clusters with Multi-Point Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div id="ui">
+    <h3>Simulation Controls</h3>
+    <label>Species count
+      <input id="speciesCount" type="number" min="1" max="8" value="4">
+    </label>
+    <label>Particle count
+      <input id="particleCount" type="number" min="100" max="3000" value="1200">
+    </label>
+    <label>Radius max
+      <input id="rMax" type="range" min="20" max="200" value="90">
+    </label>
+    <label>Time step
+      <input id="dt" type="range" min="0.5" max="3" step="0.1" value="1.0">
+    </label>
+    <label>Damping
+      <input id="damp" type="range" min="0" max="0.1" step="0.005" value="0.02">
+    </label>
+    <button id="randomize">Randomize matrix</button>
+    <button id="reset">Reset particles</button>
+    <button id="clear">Zero matrix</button>
+
+    <h3>Attraction Matrix</h3>
+    <div id="matrix"></div>
+
+    <h3>Graph Editor</h3>
+    <canvas id="graph" width="300" height="180"></canvas>
+    <div class="legend">
+      <span>-1 (repel)</span>
+      <span>Force curve</span>
+      <span>+1 (attract)</span>
+    </div>
+  </div>
+
+  <script src="sim.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
