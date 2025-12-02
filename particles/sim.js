@@ -432,7 +432,7 @@ document.getElementById('loadFile').addEventListener('change', (event) => {
   reader.readAsText(file);
 });
 document.getElementById('loadExample').addEventListener('click', () => {
-  fetch('particles/triGlider.json')
+  fetch('triGlider.json')
   .then(response => response.json())
   .then(state => {
       // Restore values
